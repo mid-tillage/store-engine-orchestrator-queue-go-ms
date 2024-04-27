@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: store-engine-orchestrator-queue-go-ms-pod
+  labels:
+    app: store-engine-orchestrator-queue-go-ms
+spec:
+  containers:
+  - name: store-engine-orchestrator-queue-go-ms-container
+    image: store-engine-orchestrator-queue-go-ms:latest
+    imagePullPolicy: IfNotPresent
+    ports:
+    - containerPort: 3050
+    env:
+    - name: QUEUE_REDIS_IP
+      value: "host.docker.internal"
+    - name: QUEUE_REDIS_PORT
+      value: "6379"
+    - name: QUEUE_REDIS_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: redis-password
+          key: QUEUE_REDIS_PASSWORD
+    - name: STORE_ENGINE_ORCHESTRATOR_QUEUE_SERVER_PORT
+      value: "3050"

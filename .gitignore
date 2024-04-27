@@ -1,0 +1,40 @@
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+
+# Folders
+_obj/
+_test/
+bin/
+pkg/
+
+# Go executables
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Dependency directories (Golang)
+vendor/
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Binary artifacts (if any)
+*.bin
+
+# Testing files
+*.test
+
+# Dot files and directories
+/.idea
+/.vscode
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment variables file
+.env
