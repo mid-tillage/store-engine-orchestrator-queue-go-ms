@@ -38,7 +38,7 @@ You can access the Swagger documentation at: `http://localhost:8080/swagger/inde
 docker build -t store-engine-orchestrator-queue-go-ms:latest -f Dockerfile .
 
 # Run Docker container (with example port mappings and environment variables)
-docker run -p 3050:3050 -p 5432:5432 -e QUEUE_REDIS_IP="host.docker.internal" -e QUEUE_REDIS_PORT="6379" -e QUEUE_REDIS_PASSWORD="mypassword" store-engine-orchestrator-queue-go-ms
+docker run -p 3050:3050 -e QUEUE_REDIS_IP="host.docker.internal" -e QUEUE_REDIS_PORT="6379" -e QUEUE_REDIS_PASSWORD="mypassword" store-engine-orchestrator-queue-go-ms
 ```
 
 ### Image resource usage metrics
